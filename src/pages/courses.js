@@ -1,17 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const Mockup = () =>
+const Courses = () =>
 {
     return(
-        <Wrapper>
-          
-        </Wrapper>
-    )
+        <Wrapper>Courses</Wrapper>
+    );
 }
 
-export default Mockup;
+export default Courses;
 
 const Wrapper = styled.div`
 `;
-
