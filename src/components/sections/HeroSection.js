@@ -1,10 +1,15 @@
 //cette section est celle tout a gauche en haut de la partie main
 import React from 'react';
 import styled from 'styled-components';
-import { H1, MediumText, SmallText } from '../../styles/TextStyles';
-import { themes } from '../../styles/ColorStyles';
+
+// Components
 import PurchaseButton from '../buttons/PurchaseButton';
 import MockupAnimation from '../animations/MockupAnimation';
+
+// Styles
+import { themes } from '../../styles/ColorStyles';
+import { H1, MediumText, SmallText } from '../../styles/TextStyles';
+
 
 const HeroSection = (props) => {
     return(

@@ -1,4 +1,4 @@
-export const menuData = [
+const menuData = [
     {
         title: "Courses",
         icon: "/images/icons/courses.svg",
@@ -35,3 +35,5 @@ export const menuData = [
         link: "/account"
     }
 ];
+
+export default menuData;

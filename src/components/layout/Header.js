@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { menuData } from '../../data/menuData';
+
+// Components
 import  MenuButton from '../buttons/MenuButton';
+
+// Data
+import { menuData } from '../../data';
 
 
 const Header = () => {

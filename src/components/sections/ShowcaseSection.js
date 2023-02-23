@@ -1,55 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import { H3, SmallText, SmallText2, MediumText } from '../../styles/TextStyles';
-import { themes } from '../../styles/ColorStyles';
+
+// Components
 import CourseCard from '../cards/CourseCard';
 
-const thumbnailsSrc = [
-    '/images/logos/swiftui-logo.svg',
-    '/images/logos/react-logo.svg',
-    '/images/logos/figma-logo.svg',
-    '/images/logos/framer-logo.svg',
-    '/images/logos/webflow-logo.svg',
-    '/images/logos/protopie-logo.svg'
-];
+// Styles
+import { H3, SmallText, SmallText2, MediumText } from '../../styles/TextStyles';
+import {themes} from '../../styles/ColorStyles'
 
-const courses = [
-    {
-        title: 'UI Design for Developers',
-        duration: '20 videos - 3 hours',
-        thumbnail: '/images/icons/tutorials.svg',
-        avatars: ['', ''],
-        bg: 'linear-gradient(180deg, #DC5F93 0%, #9356D0 100%)'
-    },
-    {
-        title: 'UI Design for Android',
-        duration: '20 videos - 3 hours',
-        thumbnail: '/images/icons/tutorials.svg',
-        avatars: ['', ''],
-        bg: 'linear-gradient(200.42deg, #FF8570 13.57%, #F9504A 98.35%)'
-    },
-    {
-        title: 'Design & Code in Framer web',
-        duration: '20 videos - 3 hours',
-        thumbnail: '/images/icons/tutorials.svg',
-        avatars: ['', ''],
-        bg: 'linear-gradient(200.44deg, #4316DB 13.57%, #9076E7 98.38%)'
-    },
-    {
-        title: 'React for Designers',
-        duration: '20 videos - 3 hours',
-        thumbnail: '/images/icons/tutorials.svg',
-        avatars: ['', ''],
-        bg: 'linear-gradient(180deg, #343563 0%, #4926AD 100%)'
-    },
-    {
-        title: 'Flutter for Designers',
-        duration: '20 videos - 3 hours',
-        thumbnail: '/images/icons/tutorials.svg',
-        avatars: ['', ''],
-        bg: 'linear-gradient(360deg, #2FB8FF 0%, #9EECD9 100%)'
-    }
-]
+// Data
+import { courseData, thumbnailsData } from '../../data';
+
+
 
 const ShowcaseSection = () => {
     return (
@@ -68,7 +30,7 @@ const ShowcaseSection = () => {
                     </TextWrapper>
 
                     <ThumbnailsWrapper>
-                        {thumbnailsSrc.map((src, index) => (
+                        {thumbnailsData.map((src, index) => (
                             <Thumbnail src={src} key={`thumbnail-${index}`} />
                         ))}
                     </ThumbnailsWrapper>
@@ -86,7 +48,7 @@ const ShowcaseSection = () => {
             </ContentWrapper>
 
             <CoursesWrapper>
-                {courses.map(item => (
+                {courseData.map(item => (
                     <CourseCard 
                         bg={item.bg}
                         title={item.title}
@@ -96,6 +58,20 @@ const ShowcaseSection = () => {
                     />
                 ))}
             </CoursesWrapper>
+
+            <FooterWrapper>
+                <Footer1>
+                    <div className="f1" />
+                    <div className="f2" /> 
+                    <div className="f3" /> 
+                    <div className="f4" /> 
+                    <div className="f5" /> 
+                </Footer1>
+                <Footer2>
+                    <Img src='...'/>
+                    <Msg>Browse courses</Msg>
+                </Footer2>
+            </FooterWrapper>
         </Wrapper>
     );
 }
@@ -213,3 +189,90 @@ const CoursesWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
 `;
+
+const FooterWrapper = styled.div`
+    display:grid;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    position: relative;
+    padding: 20px 0;
+`;
+
+const Footer1 = styled.div`
+       
+        display: flex;
+        gap: 7px;
+        width: 87px;
+        height: 9px;
+        justify-content: center;
+        margin: auto;
+        
+        
+    .f1 {
+        width: 9px;
+        height: 9px;
+        border-radius: 30px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .f2 {
+        width: 9px;
+        height: 9px;
+        border-radius: 30px;
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+    .f3 {
+        width: 9px;
+        height: 9px;
+        border-radius: 30px;
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+    .f4 {
+        width: 9px;
+        height: 9px;
+        border-radius: 30px;
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+    .f5 {
+        width: 9px;
+        height: 9px;
+        border-radius: 30px;
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+`;
+
+const Footer2 = styled.div`
+    display: flex;
+    
+    align-items: center;
+    padding: 12px 14px;
+    gap: 14px;
+
+
+    width: 186px;
+    height: 44px;
+
+    background: linear-gradient(180deg, rgba(24, 32, 79, 0.4) 0%, rgba(24, 32, 79, 0.25) 100%);
+    border: 0.5px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 30px;
+
+`;
+
+
+const Img = styled.img`
+
+`
+
+const Msg = styled.div`
+    
+`

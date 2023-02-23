@@ -9,10 +9,11 @@ const CourseCard = (props) => {
     return (
         <Wrapper bg={bg}>
             <ContentWrapper>
-                <InfoWrapper>
-                    
-                </InfoWrapper>
-
+                
+                <Avatars>
+                    <Avatar src={avatars[0]}/>
+                    <Avatar src={avatars[1]}/>
+                </Avatars>
                 <ContentWrapper>
                     <Illustration src={thumbnail} />
 
@@ -25,6 +26,8 @@ const CourseCard = (props) => {
                         <Icon src="/images/icons/like.svg" />
                     </ActionWrapper>
                 </ContentWrapper>
+
+                
             </ContentWrapper>
         </Wrapper>
     );
@@ -46,7 +49,6 @@ const Wrapper = styled.div`
     align-items: center;
 `;
 
-const InfoWrapper = styled.div``;
 
 const ContentWrapper = styled.div`
     display: flex;
@@ -54,6 +56,7 @@ const ContentWrapper = styled.div`
     justify-content: center;
     align-items: center;
     gap: 10px;
+    position: relative;
 `;
 
 const Illustration = styled.img``;
@@ -63,7 +66,7 @@ const Title = styled(H3)`
 `;
 
 const Subtitle = styled(MediumText)`
-    color: ${themes.dark.text1};
+    color: #fff;
 `;
 
 const ActionWrapper = styled.div`
@@ -78,3 +81,25 @@ const Icon = styled.div`
     border-radius: 50%;
     background: url(${props => props.src}) no-repeat center, rgba(0, 0, 0, 0.2);
 `;
+
+const Avatars = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+    position: absolute;
+    width: 32px;
+    height: 74px;
+    right: 20px;
+    top: -44px;
+`
+const Avatar = styled.img`
+    width: 32px;
+    height: 32px;
+    border-radius: 30px;
+    
+    justify-content: center;
+    align-items: center;
+`
