@@ -7,6 +7,9 @@ import HeroSection from "../components/sections/HeroSection";
 // import Waves from "../components/sections/Waves";
 import ShowcaseSection from "../components/sections/ShowcaseSection";
 import TutorialSection from "../components/sections/TutorialSection";
+import CertificateSection from "../components/sections/CertificateSection";
+import DiscountSection from "../components/sections/DiscountSection";
+import Testimonial from "../components/sections/Testimonial";
 
 function IndexPage() {
   return (
@@ -14,7 +17,10 @@ function IndexPage() {
       <SEO title="Home" />
       <HeroSection />
       <ShowcaseSection />
-      <TutorialSection/>
+      <TutorialSection />
+      <CertificateSection />
+      <DiscountSection />
+      <Testimonial />
     </Layout>
   )
 }

@@ -8,36 +8,9 @@ import HandBook from "../cards/HandBook";
 import { themes } from '../../styles/ColorStyles';
 import { MediumText, H2, SmallText } from '../../styles/TextStyles';
 
+// Data
+import { handBook } from "../../data";
 
-const handBook = [
-    {
-        bg: '#C3485E',
-        title: 'FEATURED',
-        subTitle: 'The Figma Handbook',
-        description: 'A comprehensive guide to the best tips and tricks in SwiftUI',
-        logo: '...',
-        image1: '...',
-        texte1: '30 free tutorials',
-        image2: '...',
-        texte2: 'Videos, PDF, files',
-        texte3: 'PRO',
-        bgShadow: 'rgba(248, 107, 181)'
-    },
-
-    {
-        bg: '#4A48C3',
-        title: 'FEATURED',
-        subTitle: 'The SwiftUI Handbook',
-        description: 'A comprehensive guide to the best tips and tricks in SwiftUI',
-        logo: '...',
-        image1: '...',
-        texte1: '30 free tutorials',
-        image2: '...',
-        texte2: 'Videos, PDF, files',
-        texte3: 'PRO',
-        bgShadow: 'rgba(107, 112, 248, 0.5)'
-    }
-]
 
 const TutorialSection = () =>{
     return(
@@ -53,7 +26,7 @@ const TutorialSection = () =>{
                     </Footer>
                 </WrapperTuto>
 
-                {handBook.map( (item, index) => ( <HandBook key={`card-${index}`} bg={item.bg} title={item.title} subTitle={item.subTitle} description={item.description} logo={item.logo} image1={item.image1} texte1={item.texte1} image2={item.image2} texte2={item.texte2} texte3={item.texte3} bgShadow={item.bgShadow} /> )
+                {handBook.map( (item, index) => ( <HandBook key={`card-${index}`} bg={item.bg} title={item.title} subTitle={item.subTitle} description={item.description} logo={item.logo} image1={item.image1} texte1={item.texte1} image2={item.image2} texte2={item.texte2} texte3={item.texte3} bgShadow={item.bgShadow} bgShadowShadow={item.bgShadowShadow} /> )
                 )}
  
             </WrapperContent>

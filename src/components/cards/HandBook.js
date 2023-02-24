@@ -5,11 +5,11 @@ import {themes} from '../../styles/ColorStyles'
 
 const HandBook = (props) =>{
 
-    const { bg, title, subTitle, description, logo, image1, texte1, image2, texte2, texte3, bgShadow } = props;
+    const { bg, title, subTitle, description, logo, image1, texte1, image2, texte2, texte3, bgShadow, bgShadowShadow } = props;
 
     return(
-        <WrapperHand bg={bg} bgShadow={bgShadow}>
-            <ContentWrapper>
+        <WrapperHand bgShadow={bgShadow} bgShadowShadow={bgShadowShadow}>
+            <ContentWrapper  bg={bg}>
 
                 <Header>
                     <Title>{title}</Title>
@@ -43,19 +43,34 @@ const HandBook = (props) =>{
 export default HandBook;
 
 const WrapperHand = styled.div`
-    width: 300px;
-    background: ${props => props.bg};
-    border: 0.5px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(20px);
 
-    box-shadow: 10px 10px 1px ${props => props.bgShadow};
+    width: 298px;
+    height: 387px;
+    padding: -14px;
+
+    background: ${props => props.bgShadow};
+    border: 0.5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0px 60px 40px 110px;
+    box-shadow: 2px 17px  ${props => props.bgShadowShadow};
+
     
 `
 
 const ContentWrapper = styled.div`
     display: grid;
-    gap:17px;
+    margin: -2px;
+    gap:7px;
+
     padding:1em;
+    padding-bottom: 3em;
+
+    width: 300px;
+    height: 357px;
+
+    background: ${props => props.bg};
+    border: 0.5px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    border-radius: 0 30px 70px 70px;
     
 `
 
@@ -86,7 +101,7 @@ const Description = styled(Caption)`
 
 const Footer = styled.div`
    display: grid;
-   gap:24px
+   gap:14px
 `
 
 const Footer1 = styled.div`
@@ -134,4 +149,5 @@ const Texte3 = styled(SmallText)`
     border-radius: 5px;
     
     text-align: center;
+    
 `
