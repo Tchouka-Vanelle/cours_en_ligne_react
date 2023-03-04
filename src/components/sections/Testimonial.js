@@ -96,6 +96,7 @@ const Profession = styled(SmallText)`
 
 const Description = styled(SmallText)`
     color: ${themes.dark.text2};
+    max-height: 1%;
 `
 
 const Content = styled.div`

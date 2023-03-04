@@ -10,6 +10,12 @@ import TutorialSection from "../components/sections/TutorialSection";
 import CertificateSection from "../components/sections/CertificateSection";
 import DiscountSection from "../components/sections/DiscountSection";
 import Testimonial from "../components/sections/Testimonial";
+import Logos from "../components/sections/Logos";
+import After_Logos from "../components/sections/After_Logos";
+import Instruction_Card from "../components/sections/Instruction_Card";
+import After_Instruction_Card from "../components/sections/After_Instruction_Card";
+import Offers from "../components/sections/Offers";
+import Footer from "../components/sections/Footer";
 
 function IndexPage() {
   return (
@@ -21,6 +27,12 @@ function IndexPage() {
       <CertificateSection />
       <DiscountSection />
       <Testimonial />
+      <Logos/>
+      <After_Logos/>
+      <Instruction_Card/>
+      <After_Instruction_Card/>
+      <Offers/>
+      <Footer/>
     </Layout>
   )
 }
