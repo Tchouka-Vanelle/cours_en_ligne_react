@@ -79,7 +79,7 @@ const Instruction_Card = () =>{
         <Wrapper>
             <ContentWrapper>
                 {card.map((item, index) => 
-                <Card>
+                (<Card key={`card-${index}`}>
                     <Left>
                         <Image src={item.image}/>
                         <Name> {item.name} </Name>
@@ -143,7 +143,7 @@ const Instruction_Card = () =>{
                         </Row>
 
                     </Right>
-                </Card>
+                </Card>)
             )}
                
             </ContentWrapper>

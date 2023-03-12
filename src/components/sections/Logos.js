@@ -11,27 +11,27 @@ const liste = [
 
     {
         picture: '/images/mesIcones/Logos/icone_apple.svg',
-        name: ''
+        name: '...'
     },
 
     {
-        picture: '',
+        picture: '...',
         name: 'facebook'
     },
 
     {
         picture: '/images/mesIcones/Logos/airbnb.svg',
-        name: ''
+        name: '...'
     },
 
     {
         picture: '/images/mesIcones/Logos/google.svg',
-        name: ''
+        name: '...'
     },
 
     {
         picture: '/images/mesIcones/Logos/amazon.svg',
-        name: ''
+        name: '...'
     }
 
 ]
@@ -41,10 +41,11 @@ const Logos = () =>{
         <Wrapper>
             <ContentWrapper>
                 {liste.map((item, index) => 
-                <Logo key={`logo_{index}`}>
+                (<Logo key={`logo-${index}`}>
                     <Picture src={item.picture}/>
                     <Name>{item.name}</Name>
-                </Logo> )}
+                </Logo>)
+                 )}
             </ContentWrapper>
         </Wrapper>
     );

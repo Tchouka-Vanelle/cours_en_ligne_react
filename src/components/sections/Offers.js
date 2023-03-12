@@ -46,7 +46,7 @@ const boxBody = [[
 [
     {
         First: '5 users',
-        Second: ''
+        Second: '...'
     },
     {
         First: 'Manage',
@@ -95,11 +95,11 @@ const Offers= () =>{
 
                         <BodyCard>
                             {boxBody[index].map((value, number) => 
-                            <Card key={`card-${number}`}>
+                            (<Card key={`card-${number}`}>
                                 <Check src='/images/mesIcones/Offers/check.svg' />
                                 <First> {value.First} </First>
                                 <Second> {value.Second} </Second>
-                            </Card>
+                            </Card>)
                             )}
                         </BodyCard>
 

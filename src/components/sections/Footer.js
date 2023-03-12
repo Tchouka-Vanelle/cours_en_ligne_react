@@ -57,18 +57,20 @@ const Footer= () =>{
 
                 <Column>
                     {column1.map((item, index) => 
-                    <Value key={`val_${index}`}>
+                    (<Value key={`val-${index}`}>
                         <Icone src={item.icone} />
                         <Name> {item.name} </Name>
-                    </Value>)}
+                    </Value>)
+                    )}
                 </Column>
 
                 <Column>
                     {column2.map((item, index) => 
-                    <Value key={`val_${index}`}>
+                    (<Value key={`val-${index}`}>
                         <Icone src={item.icone} />
                         <Name> {item.name} </Name>
-                    </Value>)}
+                    </Value>)
+                    )}
                 </Column>
 
                 <Description>
